@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Typing Speed Test</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+</head>
+<body>
+    <!-----------------------------------------------------------------This is the nav-bar + Welcome Div.---------------------------------------------------------- -->
+<header class="h1">
+    
+    
+    <nav>
+    <h1>The<span>Typing Speed Test</span></h1>
+    <a href="#header"><button>Get Started!</button></a>
+    </nav>
+
+    
+    <div class="typing-text">
+        <h1>Let's <span id="auto-input" ></span></h1>
+        <a href="#header" ><button>Get Started!</button></a>
+    </div>
+      
+</header>
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+        <script>
+    
+            var typed = new Typed("#auto-input", {
+                strings: ["see who type fastest!", "get your fingers move!!", "get started!!!"],
+                typeSpeed: 100,
+                backSpeed: 100,
+                loop: true
+            })
+        </script>
+
+    <!-----------------------------------------------------------------This is the TYPING SECTION.---------------------------------------------------------- -->
+    <section class="h3">
+        <div id="header">
+        <h2>THE TYPING SPEED TEST</h2><br>
+        </div>
+    
+        <div class="wrapper">
+            <input type="text" class="input-field" />
+    
+        <div class="content-box">
+    
+              <div class="text">
+                <p id="para"></p>
+              </div>
+    
+              <div class="content">
+                    <ul class="result-details">
+                        <li class="time">
+                            <p>Time Left:</p>
+                            <span><b>60</b>s</span>
+                        </li>
+                        <li class="mistake">
+                            <p>Mistakes:</p>
+                            <span>0</span>
+                        </li>
+                        <li class="wpm">
+                             <p>WPM:</p>
+                             <span>0</span>
+                        </li>
+                        <li class="cpm">
+                            <p>CPM:</p>
+                            <span>0</span>
+                        </li>
+                    </ul>
+                </div>
+    
+            </div>
+    
+        </div>
+        <button id="try_again">Try Again</button>
+    </section>
+         
+  <!-----------------------------------------------------------------This is the FOOTER SECTION.---------------------------------------------------------- -->
+       
+    <div id="footer">
+             <div class="footer-content">
+            <h2 id="college">GOVERNMENT POLYTECHNIC KOLHAPUR</h2>
+            <h3>IT DEPARTMENT</h3>
+            <h3 id="mam"><u>GUIDANCE - MRS. M. S. ARADE MAM</u></h3>
+            <p>SHARE WITH FRIENDS:</p>
+            <ul>
+                <li><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://www.youtube.com/"><i class="fa fa-youtube"></i></a></li>
+                <li><a href="https://www.whatsapp.com/"><i class="fa fa-whatsapp"></i></a></li>
+                <li><a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a></li>
+            </ul>
+            </div>
+            <div class="footer-bottom">
+            <h3>Copyright &copy; 2022 The_Typing_Test_Team &trade;| Designed by <span id="we"><u>216015 & 216009.</u></span></h3>
+            </div>
+    </div>
+
+ <canvas id="my-canvas"></canvas>
+
+ <script src="js/paragraphs.js"></script>
+ <script src="js/script.js"></script>
+ <script src="js/index.min.js"></script>
+
+ <script>
+    let conffe = document.querySelector('#my-canvas');
+    function get_confetti(){
+      conffe.classList.add('active');
+      
+    }
+    function remove_confetti(){
+      conffe.classList.remove('active');
+      
+    }
+
+    var confettiSettings = { target: 'my-canvas' };
+    var confetti = new ConfettiGenerator(confettiSettings);
+    confetti.render();
+    
+ </script>
+
+</body>
+</html>
